@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "easy_linq", "easy_linq\easy
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helper", "Helper\Helper.csproj", "{AF6F88D5-17FE-4FF7-B687-ACE6B178DA8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "Linq\Linq.csproj", "{3E7B17F5-FF98-420C-B512-282B44230AD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{AF6F88D5-17FE-4FF7-B687-ACE6B178DA8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF6F88D5-17FE-4FF7-B687-ACE6B178DA8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF6F88D5-17FE-4FF7-B687-ACE6B178DA8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E7B17F5-FF98-420C-B512-282B44230AD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E7B17F5-FF98-420C-B512-282B44230AD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E7B17F5-FF98-420C-B512-282B44230AD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E7B17F5-FF98-420C-B512-282B44230AD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
