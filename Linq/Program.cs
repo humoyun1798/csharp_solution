@@ -127,7 +127,8 @@ namespace Linq
 
             #endregion 
 
-
+            //图像处理 可能会比较慢
+            //Linq 多数据 多循环可能会出性能问题
         }
         public class data
         {
