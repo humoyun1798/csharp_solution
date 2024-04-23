@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Data.Common;
+using System.Linq;
 
 namespace Linq
 {
@@ -26,7 +27,7 @@ namespace Linq
             #endregion
 
 
-            #region Part_2 Single First OrderBy
+            #region Part_2 Single SingleOrDefault 、First FirstOrDefault  、OrderBy ThenBy
             //Single 返回唯一一条数据
             Console.WriteLine(list.Single(c => c == 51));
             //Single 返回唯一一条或0条
