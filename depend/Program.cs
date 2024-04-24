@@ -8,6 +8,10 @@ namespace depend
         static void Main(string[] args)
         {
 
+        }
+        static void Main1(string[] args)
+        {
+
 
             ServiceCollection services = new ServiceCollection();
             //services.AddTransient<TestServiceImp1>(); //瞬时 GetService 一次创建一个对象
