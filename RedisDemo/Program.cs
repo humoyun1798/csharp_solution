@@ -13,7 +13,7 @@ namespace RedisDemo
             IDatabase db = redis.GetDatabase();
 
             // 存储数据
-            db.StringSet("myKey", "Hello, Redis!",TimeSpan.FromMinutes(10));
+            db.StringSet("myKey", "Hello, Redis!", TimeSpan.FromMinutes(10));
 
             // 读取数据
             string value = db.StringGet("myKey");
@@ -29,6 +29,14 @@ namespace RedisDemo
             {
                 Console.WriteLine($"Field: {entry.Name}, Value: {entry.Value}");
             }
+
+            //db.StringIncrement //原子增
+
+            //db.ListLeftPush("queue","Message1"); //消息队列左入
+            //var msg=db.ListRightPop("queue"); //消息队列右出
+
+
+
         }
     }
 }
