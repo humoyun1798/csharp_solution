@@ -13,7 +13,7 @@ namespace RedisDemo
             IDatabase db = redis.GetDatabase();
 
             // 存储数据
-            db.StringSet("myKey", "Hello, Redis!");
+            db.StringSet("myKey", "Hello, Redis!",TimeSpan.FromMinutes(10));
 
             // 读取数据
             string value = db.StringGet("myKey");
