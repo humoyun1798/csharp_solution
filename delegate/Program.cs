@@ -1,4 +1,4 @@
-﻿namespace internal delegate;
+﻿//namespace internal delegate;
 
 internal class Program
 {
