@@ -23,7 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MQ", "MQ\MQ.csproj", "{2E25
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDB_Test", "MongoDB_Test\MongoDB_Test.csproj", "{F9772FCD-D173-4CF2-9EC7-645DC301AEE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ", "RabbitMQ\RabbitMQ.csproj", "{6A065538-3FB7-4CED-B49A-D6D5E5CFAB5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ", "RabbitMQ\RabbitMQ.csproj", "{6A065538-3FB7-4CED-B49A-D6D5E5CFAB5E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{30FFC7CF-9975-4248-AC87-42445D72A34E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiHome", "MiHome\MiHome.csproj", "{318ED027-1D40-406E-A522-CCC0765A6441}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +79,14 @@ Global
 		{6A065538-3FB7-4CED-B49A-D6D5E5CFAB5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A065538-3FB7-4CED-B49A-D6D5E5CFAB5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A065538-3FB7-4CED-B49A-D6D5E5CFAB5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30FFC7CF-9975-4248-AC87-42445D72A34E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30FFC7CF-9975-4248-AC87-42445D72A34E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30FFC7CF-9975-4248-AC87-42445D72A34E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30FFC7CF-9975-4248-AC87-42445D72A34E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{318ED027-1D40-406E-A522-CCC0765A6441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{318ED027-1D40-406E-A522-CCC0765A6441}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{318ED027-1D40-406E-A522-CCC0765A6441}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{318ED027-1D40-406E-A522-CCC0765A6441}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
