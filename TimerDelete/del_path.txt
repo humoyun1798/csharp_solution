@@ -1,0 +1,10 @@
+E
+4 
+E:\downloadAndDeal\netcoreapp3.1\video
+30
+
+
+E 哪个盘
+4 小于多少g时删除
+E:\downloadAndDeal\netcoreapp3.1\video 删除目录
+30 睡眠时间 分钟
