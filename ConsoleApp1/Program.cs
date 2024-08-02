@@ -6,6 +6,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            diff.doit();
             ConsoleApp1.car_3_light_test.Test();
         }
     }
