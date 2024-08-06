@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiHome", "MiHome\MiHome.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimerDelete", "TimerDelete\TimerDelete.csproj", "{5575CE54-7EB7-4D54-8BAC-DC5255A4568C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{029030A3-9A24-4EDC-8373-1540981395BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{029030A3-9A24-4EDC-8373-1540981395BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiffWeb", "DiffWeb\DiffWeb.csproj", "{CE8B9840-8B21-4855-9221-C5BE9BF00558}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{029030A3-9A24-4EDC-8373-1540981395BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{029030A3-9A24-4EDC-8373-1540981395BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{029030A3-9A24-4EDC-8373-1540981395BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE8B9840-8B21-4855-9221-C5BE9BF00558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE8B9840-8B21-4855-9221-C5BE9BF00558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE8B9840-8B21-4855-9221-C5BE9BF00558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE8B9840-8B21-4855-9221-C5BE9BF00558}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
