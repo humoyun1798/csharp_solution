@@ -1,0 +1,23 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model DiffWeb.Models.file
+
+<div id="history">
+    @for (int j = 0; j < Model.sonlist.Count; j++)
+    {
+        <div>
+            @using (Html.BeginForm("Diff", "Diff", new { oldid = Model.sonlist[j].id, newid = Model.id }, FormMethod.Post, null, null))
+            {
+
+                <div class="clear"></div>
+                <div class="formField">
+                    <input type="submit" name="diff" value="@Model.sonlist[j].datetime.ToString()" />
+                </div>
+            }
+        </div>
+
+    }
+</div>

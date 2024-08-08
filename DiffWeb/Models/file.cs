@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using SqlSugar;
@@ -42,7 +43,8 @@ namespace DiffWeb.Models
            /// Default:
            /// Nullable:True
            /// </summary>           
-           public DateTime? datetime {get;set;}
-
+           public DateTime datetime {get;set;}
+        [SugarColumn(IsIgnore = true)]
+        public List<list> sonlist { get; set; }
     }
 }

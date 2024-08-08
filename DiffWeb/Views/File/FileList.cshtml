@@ -1,0 +1,53 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<div id="FileList">
+    <table cellpadding="0" cellspacing="0" class="diffBarTable">
+
+
+        @using (Html.BeginForm("AddFile", "file", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <!-- 这里添加文件上传的输入控件 -->
+            <input type="file" name="txtFile" />
+            <input type="submit" value="上传" />
+        }
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            var name = Model[i].name;
+
+            var nameClass = name.ToString() + "" + "历史记录：";
+            <tr line="@i">
+                <td class="@nameClass"> @nameClass </td>
+
+
+              @*   <td> <button type="button" class="btn-block">修改</button> </td>
+                <td> <button type="button" class="btn btn-default">历史记录</button> </td>
+                <id></id> *@
+              
+                @for (int j = 0; j < Model[i].sonlist.Count; j++)
+                {
+                    <td>
+                        @using (Html.BeginForm("Diff", "Diff", new { oldid = Model[i].sonlist[j].id, newid = Model[i].id }, FormMethod.Post, null, null))
+                        {
+
+                            <div class="clear"></div>
+                            <div class="formField">
+                                <input type="submit" name="diff" value="@Model[i].sonlist[j].datetime.ToString()" />
+                            </div>
+                        }
+                    </td>
+                
+                }
+
+                @* <td class="@rightClass"></td> *@
+            </tr>
+        }
+    </table>
+</div>
+
+
+
