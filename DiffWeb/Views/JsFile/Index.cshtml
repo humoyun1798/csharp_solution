@@ -1,0 +1,114 @@
+﻿
+<style>
+    .form-inline .input-group {
+        display: inline-table;
+        vertical-align: middle;
+    }
+</style>
+<div class="page-body" ng-app="myApp" ng-controller="myCtrl">
+    <div class="container-xl">
+        <div class="row row-cards">
+            <div class="col-12">
+                <div class="card">
+
+                    <div class="table-responsive">
+                        <table class="table table-vcenter card-table">
+                            <thead>
+                                <tr>
+
+                                    <th style="width:150px;">名字</th>
+                                    <th style="width:400px;">创建时间</th>
+                                    <th >操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="item in data">
+                                    <td>
+                                        <a href="/Uploads/{{item.name}}" target="_blank">{{item.name}}</a>
+                                    </td>
+
+                                    <td>
+                                        {{item.datetime}}
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-danger btn-xs" ng-click="Bind()">删除</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card-footer d-flex align-items-center">
+                        <p class="m-0 text-muted">Showing <span>{{pi}}</span> to <span>{{ps}}</span> of <span>{{total}}</span> entries</p>
+                        <ul class="pagination m-0 ms-auto">
+                        </ul>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+@section scripts {
+    <link href="~/lib/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <script src="~/lib/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script src="~/lib/bootstrap-datetimepicker/locales/bootstrap-datetimepicker.zh-TW.js"></script>
+
+    <script>
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+            if (r != null) return unescape(r[2]); return null; //返回参数值
+        }
+
+        function getTime(time) {
+            if (time == "0001-01-01T00:00:00") {
+                return "";
+
+            } else {
+                var day = new Date(time);
+                var minutes = day.getMinutes();
+                minutes = minutes > 9 ? minutes : '0' + minutes;
+
+                var seconds = day.getSeconds();
+                seconds = seconds > 9 ? seconds : '0' + seconds;
+                var time = day.getFullYear() + "/" + (day.getMonth() + 1) + "/" + day.getDate() + " " + day.getHours() + ":" + minutes + ":" + seconds
+                return time;
+            }
+        }
+        var myAppScope = null;
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope, $http, $location) {
+            myAppScope = $scope;
+            $scope.pi = 1;
+            $scope.Cname = "";
+            $scope.ps = "20";
+
+
+            $scope.Bind = function () {
+
+                var rid = getUrlParam("rid");
+                site.loading(true);
+                $http.post("/jsfile/filelist", {
+
+                }, angularpostconfig).success(function (e) {
+                    site.loading(false);
+                    e.data.data.forEach(item => {
+                        item.create_time = getTime(item.create_time)
+                    });
+                    $scope.data = e.data.data;
+                    $scope.total = e.total;
+                    $(".pagination").html(e.page);
+                });
+            };
+            $scope.Bind();
+
+
+        });
+
+    </script>
+}

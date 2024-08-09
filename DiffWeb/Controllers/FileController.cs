@@ -19,7 +19,10 @@ namespace DiffWeb.Controllers
         {
             return View();
         }
-
+        public IActionResult JsFile()
+        {
+            return View();
+        }
         public void AddModel()
         {
             var db = new SqlSugarClient(new ConnectionConfig() { ConnectionString = "Data Source=localhost;Port=3306;Initial Catalog=js_file;Persist Security Info=True;User ID=root;Password=123456;Pooling=True;charset=utf8mb4;MAX Pool Size=100;Min Pool Size=1;Connection Lifetime=30;", DbType = DbType.MySql, IsAutoCloseConnection = true, InitKeyType = InitKeyType.Attribute });
