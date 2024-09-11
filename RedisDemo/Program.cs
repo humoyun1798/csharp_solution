@@ -6,37 +6,47 @@ namespace RedisDemo
     {
         static void Main(string[] args)
         {
-            // 创建连接到Redis服务器的连接Multiplexer
-            ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("127.0.0.1:6379");
 
-            // 获取数据库
-            IDatabase db = redis.GetDatabase();
-
-            // 存储数据
-            db.StringSet("myKey", "Hello, Redis!", TimeSpan.FromMinutes(10));
-
-            // 读取数据
-            string value = db.StringGet("myKey");
-            Console.WriteLine($"Value retrieved from Redis: {value}");
-
-            // 示例：存储哈希表
-            HashEntry[] hashEntries = { new HashEntry("field1", "value1"), new HashEntry("field2", "value2") };
-            db.HashSet("myHash", hashEntries);
-
-            // 示例：读取哈希表
-            HashEntry[] retrievedHashEntries = db.HashGetAll("myHash");
-            foreach (var entry in retrievedHashEntries)
+            try
             {
-                Console.WriteLine($"Field: {entry.Name}, Value: {entry.Value}");
+                var get = Get("你");
+                if (get == null)
+                {
+                    Console.WriteLine(Set("你", "2B", 60));
+                }
+                else
+                {
+
+                    Console.WriteLine(get);
+                }
+
+                
+            }
+            catch (Exception ex) { 
+            
+            Console.WriteLine(ex.ToString()+ex.StackTrace);
             }
 
-            //db.StringIncrement //原子增
-
-            //db.ListLeftPush("queue","Message1"); //消息队列左入
-            //var msg=db.ListRightPop("queue"); //消息队列右出
-
-
+         
 
         }
+
+        static bool Set(string key, string value, int n) {
+
+            var redis = RedisHelper.RedisConn;
+            var db = redis.GetDatabase();
+            return db.StringSet(key, value, TimeSpan.FromSeconds(n));
+
+        }
+        static string? Get(string key)
+        {
+
+            var redis = RedisHelper.RedisConn;
+            var db = redis.GetDatabase();
+            return db.StringGet(key);
+
+        }
+
+
     }
 }
