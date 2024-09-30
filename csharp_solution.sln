@@ -37,7 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiffWeb", "DiffWeb\DiffWeb.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web Browser WPF", "Web Browser WPF\Web Browser WPF.csproj", "{7C62BE8D-E558-465C-A561-D0D0320A935E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "基准测试1", "基准测试1\基准测试1.csproj", "{23DFB81F-3558-47B7-87A0-BC5B9D802533}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "基准测试1", "基准测试1\基准测试1.csproj", "{23DFB81F-3558-47B7-87A0-BC5B9D802533}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "日历计划", "日历计划\日历计划.csproj", "{44C462DB-5033-45C3-A643-25060256F4B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -191,6 +193,14 @@ Global
 		{23DFB81F-3558-47B7-87A0-BC5B9D802533}.Release|Any CPU.Build.0 = Release|Any CPU
 		{23DFB81F-3558-47B7-87A0-BC5B9D802533}.Release|x64.ActiveCfg = Release|Any CPU
 		{23DFB81F-3558-47B7-87A0-BC5B9D802533}.Release|x64.Build.0 = Release|Any CPU
+		{44C462DB-5033-45C3-A643-25060256F4B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44C462DB-5033-45C3-A643-25060256F4B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44C462DB-5033-45C3-A643-25060256F4B7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{44C462DB-5033-45C3-A643-25060256F4B7}.Debug|x64.Build.0 = Debug|Any CPU
+		{44C462DB-5033-45C3-A643-25060256F4B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44C462DB-5033-45C3-A643-25060256F4B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44C462DB-5033-45C3-A643-25060256F4B7}.Release|x64.ActiveCfg = Release|Any CPU
+		{44C462DB-5033-45C3-A643-25060256F4B7}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
