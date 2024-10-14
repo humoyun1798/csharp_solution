@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
 using System.Linq;
+using DB;
 using 日历计划.Model;
 
 namespace 日历计划
@@ -18,7 +19,7 @@ namespace 日历计划
             {
 
 
-                var db = GetDB();
+                var db = SqliteGetDB.GetDB();
                 Console.Write("请输入今天是不是工作日(0休息 1工作日):");
                 var enter = Console.ReadLine();
 
@@ -75,6 +76,7 @@ namespace 日历计划
                     var t = new time();
                     t.state = 0;
                     t.type = Convert.ToInt32(enter);
+                    
                     t.day = start_time.ToString("yyyy-MM-dd HH:mm:ss") + "-" + start_time.AddHours(2).ToString("yyyy-MM-dd HH:mm:ss");
                     t.day_count = DateTime.Now.ToString("yyyy-MM-dd");
 
@@ -111,23 +113,23 @@ namespace 日历计划
 
         }
 
-        public static SqlSugarClient GetDB()
-        {
+        //public static SqlSugarClient GetDB()
+        //{
 
-            SqlSugarClient db = new SqlSugarClient(new ConnectionConfig()
-            {
-                //ConnectionString = @"Data Source=E:\sql.db;Version=3",//Master Connection
-                //DbType = SqlSugar.DbType.Sqlite,
-                //InitKeyType = InitKeyType.Attribute,
-                //IsAutoCloseConnection = true,
+        //    SqlSugarClient db = new SqlSugarClient(new ConnectionConfig()
+        //    {
+        //        //ConnectionString = @"Data Source=E:\sql.db;Version=3",//Master Connection
+        //        //DbType = SqlSugar.DbType.Sqlite,
+        //        //InitKeyType = InitKeyType.Attribute,
+        //        //IsAutoCloseConnection = true,
 
-                ConnectionString = @$"Data Source=C:\sqlite\test.db", // SQLite 连接字符串
-                DbType = SqlSugar.DbType.Sqlite, // 指定数据库类型为 SQLite
-                IsAutoCloseConnection = true, // 自动关闭连接
-                InitKeyType = InitKeyType.Attribute//从实体特性中读取主键自增列信息
+        //        ConnectionString = @$"Data Source=C:\sqlite\test.db", // SQLite 连接字符串
+        //        DbType = SqlSugar.DbType.Sqlite, // 指定数据库类型为 SQLite
+        //        IsAutoCloseConnection = true, // 自动关闭连接
+        //        InitKeyType = InitKeyType.Attribute//从实体特性中读取主键自增列信息
 
-            });
-            return db;
-        }
+        //    });
+        //    return db;
+        //}
     }
 }

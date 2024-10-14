@@ -39,7 +39,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web Browser WPF", "Web Brow
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "基准测试1", "基准测试1\基准测试1.csproj", "{23DFB81F-3558-47B7-87A0-BC5B9D802533}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "日历计划", "日历计划\日历计划.csproj", "{44C462DB-5033-45C3-A643-25060256F4B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "日历计划", "日历计划\日历计划.csproj", "{44C462DB-5033-45C3-A643-25060256F4B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB", "DB\DB.csproj", "{183477F1-AA7E-4DB9-B7B5-EFEBDA30C11B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -201,6 +203,14 @@ Global
 		{44C462DB-5033-45C3-A643-25060256F4B7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{44C462DB-5033-45C3-A643-25060256F4B7}.Release|x64.ActiveCfg = Release|Any CPU
 		{44C462DB-5033-45C3-A643-25060256F4B7}.Release|x64.Build.0 = Release|Any CPU
+		{183477F1-AA7E-4DB9-B7B5-EFEBDA30C11B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{183477F1-AA7E-4DB9-B7B5-EFEBDA30C11B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{183477F1-AA7E-4DB9-B7B5-EFEBDA30C11B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{183477F1-AA7E-4DB9-B7B5-EFEBDA30C11B}.Debug|x64.Build.0 = Debug|Any CPU
+		{183477F1-AA7E-4DB9-B7B5-EFEBDA30C11B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{183477F1-AA7E-4DB9-B7B5-EFEBDA30C11B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{183477F1-AA7E-4DB9-B7B5-EFEBDA30C11B}.Release|x64.ActiveCfg = Release|Any CPU
+		{183477F1-AA7E-4DB9-B7B5-EFEBDA30C11B}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
