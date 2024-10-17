@@ -19,6 +19,12 @@ namespace 日历计划
             {
 
 
+                //http://timor.tech/api/holiday/info/2024-10-4
+
+
+                //返回的 JSON 数据中包含 type 字段，其中 type 字段中的 type 值为 0 表示工作日，1 表示周末，2 表示节日，3 表示调休
+
+                // data.type.type  0和3 表示上班
                 var db = SqliteGetDB.GetDB();
                 Console.Write("请输入今天是不是工作日(0休息 1工作日):");
                 var enter = Console.ReadLine();
