@@ -4,11 +4,16 @@ namespace RedisDemo
 {
     internal class Program
     {
-        static void Main(string[] args)
+        async static void Main(string[] args)
         {
 
             try
             {
+
+
+                await RedisLockDeom.demo();
+
+
                 var get = Get("你");
                 if (get == null)
                 {
