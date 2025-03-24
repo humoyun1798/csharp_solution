@@ -11,12 +11,21 @@ namespace TimerServer
         {
             Console.WriteLine("Hello World!");
 
-            var scheduler=TestJobScheduler.Create().Result;
+            //var scheduler=TestJobScheduler.Create().Result;
+            //scheduler.Start();
+            //while (!scheduler.IsShutdown)
+            //{
+            //    Thread.Sleep(1000);
+            //}
+
+
+            var scheduler = PublicScheduler.Create(typeof(DingDingJob)).Result;
             scheduler.Start();
             while (!scheduler.IsShutdown)
             {
                 Thread.Sleep(1000);
             }
+
 
             Console.WriteLine("結束");
         }

@@ -45,9 +45,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DB", "DB\DB.csproj", "{1834
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scoket", "Scoket\Scoket.csproj", "{3BBB2B24-5B38-4CB5-96F7-1CB395712605}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperDemo2", "DapperDemo2\DapperDemo2.csproj", "{106F1C08-FC93-4A68-9B0F-3A0086627E00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DapperDemo2", "DapperDemo2\DapperDemo2.csproj", "{106F1C08-FC93-4A68-9B0F-3A0086627E00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimerServer", "TimerServer\TimerServer.csproj", "{D678218A-DD14-416C-AF24-884B4759441A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimerServer", "TimerServer\TimerServer.csproj", "{D678218A-DD14-416C-AF24-884B4759441A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{DDA539AA-D572-4EDC-BD11-712E3DEB919E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -241,6 +243,14 @@ Global
 		{D678218A-DD14-416C-AF24-884B4759441A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D678218A-DD14-416C-AF24-884B4759441A}.Release|x64.ActiveCfg = Release|Any CPU
 		{D678218A-DD14-416C-AF24-884B4759441A}.Release|x64.Build.0 = Release|Any CPU
+		{DDA539AA-D572-4EDC-BD11-712E3DEB919E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA539AA-D572-4EDC-BD11-712E3DEB919E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA539AA-D572-4EDC-BD11-712E3DEB919E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DDA539AA-D572-4EDC-BD11-712E3DEB919E}.Debug|x64.Build.0 = Debug|Any CPU
+		{DDA539AA-D572-4EDC-BD11-712E3DEB919E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA539AA-D572-4EDC-BD11-712E3DEB919E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDA539AA-D572-4EDC-BD11-712E3DEB919E}.Release|x64.ActiveCfg = Release|Any CPU
+		{DDA539AA-D572-4EDC-BD11-712E3DEB919E}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
