@@ -55,7 +55,7 @@ namespace WinFormsApp1
 
         private void process1_Exited(object sender, EventArgs e)
         {
-
+            Application.Exit(); 
         }
 
         private void Search_shiming(object sender, EventArgs e)

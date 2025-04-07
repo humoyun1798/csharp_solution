@@ -22,3 +22,18 @@
  textBox2.TextChanged += textBox2_TextChanged_1;
 ```
 
+
+
+
+
+### 关闭事件
+
+![image-20250407114046122](https://cdn.jsdelivr.net/gh/humoyun1798/image/image/imagessimage-20250407114046122.png)
+
+### 窗口隐藏显示、程序结束
+
+form.Show()
+form.Hide()
+
+Application.Exit(); 程序结束退出 //多页面的话不加这个可能依然在后台运行，只是看不见页面了
+
