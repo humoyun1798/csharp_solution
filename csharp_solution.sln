@@ -49,7 +49,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DapperDemo2", "DapperDemo2\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimerServer", "TimerServer\TimerServer.csproj", "{D678218A-DD14-416C-AF24-884B4759441A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{DDA539AA-D572-4EDC-BD11-712E3DEB919E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{DDA539AA-D572-4EDC-BD11-712E3DEB919E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerDemo", "LoggerDemo\LoggerDemo.csproj", "{2A7EB73F-4A00-41DA-B67A-1C7FEA286DCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp_learn", "Csharp_learn\Csharp_learn.csproj", "{864A2985-0DBC-4140-9795-45681D81BB93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -251,6 +255,22 @@ Global
 		{DDA539AA-D572-4EDC-BD11-712E3DEB919E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DDA539AA-D572-4EDC-BD11-712E3DEB919E}.Release|x64.ActiveCfg = Release|Any CPU
 		{DDA539AA-D572-4EDC-BD11-712E3DEB919E}.Release|x64.Build.0 = Release|Any CPU
+		{2A7EB73F-4A00-41DA-B67A-1C7FEA286DCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A7EB73F-4A00-41DA-B67A-1C7FEA286DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A7EB73F-4A00-41DA-B67A-1C7FEA286DCE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2A7EB73F-4A00-41DA-B67A-1C7FEA286DCE}.Debug|x64.Build.0 = Debug|Any CPU
+		{2A7EB73F-4A00-41DA-B67A-1C7FEA286DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A7EB73F-4A00-41DA-B67A-1C7FEA286DCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A7EB73F-4A00-41DA-B67A-1C7FEA286DCE}.Release|x64.ActiveCfg = Release|Any CPU
+		{2A7EB73F-4A00-41DA-B67A-1C7FEA286DCE}.Release|x64.Build.0 = Release|Any CPU
+		{864A2985-0DBC-4140-9795-45681D81BB93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{864A2985-0DBC-4140-9795-45681D81BB93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{864A2985-0DBC-4140-9795-45681D81BB93}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{864A2985-0DBC-4140-9795-45681D81BB93}.Debug|x64.Build.0 = Debug|Any CPU
+		{864A2985-0DBC-4140-9795-45681D81BB93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{864A2985-0DBC-4140-9795-45681D81BB93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{864A2985-0DBC-4140-9795-45681D81BB93}.Release|x64.ActiveCfg = Release|Any CPU
+		{864A2985-0DBC-4140-9795-45681D81BB93}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

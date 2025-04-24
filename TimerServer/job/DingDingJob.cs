@@ -10,9 +10,10 @@ namespace TimerServer.job
     {
         public async Task Execute(IJobExecutionContext content)
         {
+            Console.WriteLine("之前 {0}", Global.Instance.Name);
+            Global.Instance.Name = "dingdingServer";
 
-
-            Console.WriteLine("dingdingServer");
+            Console.WriteLine("之后 {0}", Global.Instance.Name);
 
 
 

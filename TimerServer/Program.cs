@@ -20,6 +20,7 @@ namespace TimerServer
 
 
             var scheduler = PublicScheduler.Create(typeof(DingDingJob)).Result;
+
             scheduler.Start();
             while (!scheduler.IsShutdown)
             {

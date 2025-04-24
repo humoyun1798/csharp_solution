@@ -32,7 +32,7 @@ namespace TimerServer.job
                     .WithIdentity("testname-触发器")
                     .StartNow()
                     .StartAt(DateTimeOffset.Parse("2024-01-01 00:00:00"))
-                    .WithCronSchedule("0 0/30 * * * ? ")
+                    .WithCronSchedule("0/5 * * * * ?")
                     .Build();
 
                 await scheduler.ScheduleJob(job, trigger);
