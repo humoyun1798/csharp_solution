@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Csharp_learn
 {
@@ -41,10 +42,10 @@ namespace Csharp_learn
             //lll.a();
             //lll.a1();
             //lll.a2();
-            var v = new 异常处理();
-            //v.a();
-            v.b(-1);
-            v.b(0);
+            var v = new 异步();
+            Task.Run(()=>v.a());
+            //v.b(-1);
+            //v.b(0);
 
             Console.ReadKey();
 

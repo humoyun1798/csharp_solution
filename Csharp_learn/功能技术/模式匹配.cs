@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Common;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Transactions;
 
@@ -14,6 +15,10 @@ namespace Csharp_learn
         public void a()
         {
             int? n = 12;
+
+            if (n is int) Console.WriteLine("is int");
+
+
             if (n is int number) //声明模式，用于测试变量类型并将其分配给新变量 n 赋值给number number只能在这个if 区间使用，else 或其他地方都调用不到number
                                  //类型测试
             {
@@ -40,6 +45,10 @@ namespace Csharp_learn
 
             //CSV 格式文件
             Console.WriteLine(Check(new string[] { "1", "DEPOSIT", "ABC", "100.00" }));
+            double? key = 11.3;
+
+            int? m = key as int?;
+            Console.WriteLine("as :" + m);
 
 
             for (int i = 0; i < 3; i++)
@@ -114,8 +123,68 @@ namespace Csharp_learn
         //    yield return new string[] { "3", "INTEREST", "2.50" };
         //    yield return new string[] { "4", "FEE", "1.00" };
         //}
+        #endregion
+
+        #region switch传奇实例
+        public class Car
+        {
+            public int Passengers { get; set; }
+        }
+
+
+
+        public class DeliveryTruck
+        {
+            public int GrossWeightClass { get; set; }
+        }
+
+
+
+        public class Taxi
+        {
+            public int Fares { get; set; }
+        }
+
+        public class Bus
+        {
+            public int Capacity { get; set; }
+            public int Riders { get; set; }
+        }
+
+
+        public decimal CalculateToll(object vehicle) =>
+            vehicle switch
+            {
+                Car c => c.Passengers switch
+                {
+                    0 => 2.00m + 0.5m,
+                    1 => 2.0m,
+                    2 => 2.0m - 0.5m,
+                    _ => 2.00m - 1.0m
+                },
+
+                Taxi t => t.Fares switch
+                {
+                    0 => 3.50m + 1.00m,
+                    1 => 3.50m,
+                    2 => 3.50m - 0.50m,
+                    _ => 3.50m - 1.00m
+                },
+
+                Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
+                Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
+                Bus b => 5.00m,
+
+                DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
+                DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
+                DeliveryTruck t => 10.00m,
+
+                { } => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
+                null => throw new ArgumentNullException(nameof(vehicle))
+            };
 
         #endregion
+      
 
 
         #region 弃元

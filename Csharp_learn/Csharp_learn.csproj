@@ -5,4 +5,9 @@
     <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Linq\" />
+    <Folder Include="异步\" />
+  </ItemGroup>
+
 </Project>
