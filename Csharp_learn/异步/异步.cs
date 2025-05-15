@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -153,6 +155,66 @@ namespace Csharp_learn
             await Task.Delay(100);
             return 42;
         }
+
+
+        #region 异步任务处理
+
+        static readonly HttpClient client = new HttpClient()
+        {
+            MaxResponseContentBufferSize = 1_000_000
+        };
+        static readonly IEnumerable<string> urls = new[]
+        {
+            "https://learn.microsoft.com/dotnet",
+            "https://learn.microsoft.com/dotnet/csharp",
+            "https://learn.microsoft.com/dotnet/standard",
+            "https://learn.microsoft.com/dotnet/core"
+        };
+
+        public async Task SumPageAsync()
+        {
+            var stopwatch = Stopwatch.StartNew();
+
+            var tasks = urls.Select(url => downLoadUrlAsync(url, client));
+
+            var downloadTasks = tasks.ToList();
+
+            var total = 0;
+            while (downloadTasks.Any()) //是否存在元素
+            {
+                var finishedTask = await Task.WhenAny(downloadTasks); //等待任意一个任务完成
+                downloadTasks.Remove(finishedTask); //移除已完成的任务
+                total += await finishedTask; //获取已完成任务的结果
+            }
+
+
+            stopwatch.Stop();
+            Console.WriteLine($"\nTotal bytes returned:    {total:#,#}");  //#表示数字符,表示千位分隔符
+            Console.WriteLine($"Elapsed time:              {stopwatch.Elapsed}\n");
+
+        }
+
+
+        public async Task<int> downLoadUrlAsync(string url, HttpClient client)
+        {
+            byte[] data = await client.GetByteArrayAsync(url);
+            Console.WriteLine($"{url,-60} {data.Length,10:#,#}"); //-60表示左对齐占60个字符位 (没超过60空格补上，超过了显示就错位了)，10表示右对齐占10个字符位
+            return data.Length;
+
+        }
+        #endregion
+
+        #region 异步处理文件
+
+
+        public async Task c()
+        {
+
+        }
+
+
+        #endregion
+
 
     }
 }

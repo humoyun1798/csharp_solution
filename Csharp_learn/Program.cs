@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Csharp_learn
 {
@@ -42,8 +43,14 @@ namespace Csharp_learn
             //lll.a();
             //lll.a1();
             //lll.a2();
+            var url="https://www.baidu.comggj";
+            var data= new byte[1000000];
+            Console.WriteLine($"{url,-60} {data.Length,10:#,#}"); //-60表示左对齐占60个字符位，10表示右对齐占10个字符位
+
+
+
             var v = new 异步();
-            Task.Run(()=>v.a());
+            Task.Run(()=>v.SumPageAsync());
             //v.b(-1);
             //v.b(0);
 
