@@ -7,8 +7,6 @@
 
   <ItemGroup>
     <Folder Include="Linq\" />
-    <Folder Include="锁\" />
-    <Folder Include="高级\反射\" />
   </ItemGroup>
 
 </Project>

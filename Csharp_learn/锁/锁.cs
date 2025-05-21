@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Csharp_learn
 {
-    internal class 锁
+    public class 锁
     {
     }
 }
